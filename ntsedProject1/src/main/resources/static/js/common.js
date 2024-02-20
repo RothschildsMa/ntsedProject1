@@ -29,6 +29,7 @@ export function showSelectOption(kbn, id) {
 	});
 }
 
+
 export function blankCheck(elementId,elementname,errorId) {
 	if ($(`#${elementId}`).val().trim() === "") {
 		$(`#${errorId}`).text(`${elementname}を入力してください`);

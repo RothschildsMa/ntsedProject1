@@ -19,7 +19,7 @@ import lombok.RequiredArgsConstructor;
 public class InfoController {
 
 	private final IEmployeeService employeeService;
-
+	
 
 	@RequestMapping(value = "/getAll")
 	public JsonResponse<List<Employee>> getList() {
@@ -30,7 +30,7 @@ public class InfoController {
 	public JsonResponse<List<Employee>> search(SearchRequest searchRequest) {
 		return new JsonResponse<>(200, employeeService.getSearchList(searchRequest));
 	}
-
+	
 	@RequestMapping(value = "/delete")
 	public JsonResponse<Void> delete(@RequestBody List<Integer> empIds) {
 
